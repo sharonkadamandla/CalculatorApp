@@ -1,2 +1,6 @@
 # CalculatorApp
-Calculator app built on Android Studio using Kotlin, React
+Calculator app built on Android Studio using Kotlin
+
+Technologies Used: 
+Backend : Kotlin
+Frontend : XML
