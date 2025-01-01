@@ -1,11 +1,13 @@
 package com.apps.kotlincalculator
 
+import android.content.ClipboardManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.content.ClipData
 
 class MainActivity : AppCompatActivity() , View.OnClickListener {
 
@@ -16,6 +18,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
     lateinit var etA : EditText
     lateinit var etB : EditText
     lateinit var resultTV : TextView
+    lateinit var clipboard: ClipboardManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +31,8 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         etA = findViewById(R.id.et_a)
         etB = findViewById(R.id.et_b)
         resultTV = findViewById(R.id.result_tv)
+
+        clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
 
         btnAdd.setOnClickListener(this)
         btnSub.setOnClickListener(this)
@@ -59,7 +64,12 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
                 inputInString = "$a / $b = "
             }
         }
+        var clip = ClipData.newPlainText("result is","$result")
+        clipboard.setPrimaryClip(clip)
+
         resultTV.text = "$inputInString $result"
+
+
     }
 }
 
