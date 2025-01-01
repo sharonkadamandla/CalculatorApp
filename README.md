@@ -20,4 +20,4 @@ Adding Complex calculation buttons
 
 UI using React
 
-Adding database to store history
+Adding database to store history and more
