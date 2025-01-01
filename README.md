@@ -1,18 +1,23 @@
 # CalculatorApp
 Calculator app built on Android Studio using Kotlin
 
-Technologies Used: 
+Calculations Available : +, -, *, / 
+
+Other Features : Copies the result automatically to clipboard
+
+Technologies Used
+------------------------------------------------------------------------
 
 Backend - Kotlin
 
 Frontend - XML
 
-Calculations Available : +, -, *, / 
 
-Future Improvements: 
+Future Improvements
+------------------------------------------------------------------------
 
 Adding Complex calculation buttons
 
 UI using React
 
-Adding database to store history
+Adding database to store history and more
